@@ -7,7 +7,7 @@ describe('Vue App Welcome Page', () => {
     it('Page Title', () => {
         cy
             .get('h1')
-            .contains('Welcome to Your Vue.js App');
+            .contains('Welcome to Your Vue.js App')
     });
 
     describe('Essential Links Section', () => {
@@ -76,12 +76,43 @@ describe('Vue App Welcome Page', () => {
                 .contains('Ecosystem');
         });
 
-        it('vue-router links to correct and working url', () => {
+        it('vue-router link content is correct and links to designated working url', () => {
             cy
                 .get('a')
                 .contains('vue-router')
                 .should('have.attr', 'href').and('include', 'http://router.vuejs.org/');
             cy.request('http://router.vuejs.org/').then((response) => {
+                expect(response.status).to.eq(200);
+            });
+        });
+
+        it('vuex link content is correct and links to designated working url', () => {
+            cy
+                .get('a')
+                .contains('vuex')
+                .should('have.attr', 'href').and('include', 'http://vuex.vuejs.org/');
+            cy.request('http://vuex.vuejs.org/').then((response) => {
+                expect(response.status).to.eq(200);
+            });
+        });
+
+        it('vue-loader link content is correct and links to designated working url', () => {
+            cy
+                .get('a')
+                .contains('vue-loader')
+                .should('have.attr', 'href').and('include', 'http://vue-loader.vuejs.org/');
+            cy.request('http://vue-loader.vuejs.org/').then((response) => {
+                expect(response.status).to.eq(200);
+            });
+        });
+
+
+        it('awesome-vue link content is correct and links to designated working url', () => {
+            cy
+                .get('a')
+                .contains('awesome-vue')
+                .should('have.attr', 'href').and('include', 'https://github.com/vuejs/awesome-vue');
+            cy.request('https://github.com/vuejs/awesome-vue').then((response) => {
                 expect(response.status).to.eq(200);
             });
         });

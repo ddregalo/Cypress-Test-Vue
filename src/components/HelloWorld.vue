@@ -4,7 +4,7 @@
     <h2>Essential Links</h2>
     <ul id="essential">
       <li>
-        <a 
+        <a
           id="corDocs"
           href="https://vuejs.org"
           target="_blank"
