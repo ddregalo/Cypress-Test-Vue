@@ -67,5 +67,24 @@ describe('Vue App Welcome Page', () => {
         });
 
     });
+
+    describe('Ecosystem Links Section', () => {
+        it('has section title', () => {
+            cy
+                .get('h2')
+                .eq(1)
+                .contains('Ecosystem');
+        });
+
+        it('vue-router links to correct and working url', () => {
+            cy
+                .get('a')
+                .contains('vue-router')
+                .should('have.attr', 'href').and('include', 'http://router.vuejs.org/');
+            cy.request('http://router.vuejs.org/').then((response) => {
+                expect(response.status).to.eq(200);
+            });
+        });
+    });
 });
 
