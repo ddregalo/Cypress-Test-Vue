@@ -2,9 +2,10 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <ul>
+    <ul id="essential">
       <li>
-        <a
+        <a 
+          id="corDocs"
           href="https://vuejs.org"
           target="_blank"
         >
