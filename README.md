@@ -1,6 +1,6 @@
-# ddvueapp
+# Cypress Test Vue Welcome Page
 
-> A Vue.js project
+> Using Cypress to test Vue App welcome page. Simple practise tests that select/assert elements and click links using the request() function.
 
 ## Build Setup
 
@@ -20,8 +20,12 @@ npm run build --report
 # run unit tests
 npm run unit
 
-# run end-2-end tests
+# run cypress end-2-end tests
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Frameworks
+
+* Vue JS 2
+* Cypress (Testing)
+* Node JS
