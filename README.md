@@ -1,6 +1,6 @@
 # Cypress Test Vue Welcome Page
 
-> Using Cypress to test Vue App welcome page. Simple practise tests that select/assert elements and click links using the request() function.
+> Using Cypress to test Vue App welcome page. Simple practise tests that select/assert elements and click links using the request() function to assert 200 status codes on links.
 
 ## Build Setup
 
@@ -29,3 +29,9 @@ npm test
 * Vue JS 2
 * Cypress (Testing)
 * Node JS
+
+
+## Related Documentation & Sources
+
+* Vue JS: https://vuejs.org/
+* Cypress: https://www.cypress.io
